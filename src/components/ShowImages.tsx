@@ -8,10 +8,10 @@ const ShowImages = ({ imgs }: { imgs: string[] })=> {
     };
     
     return (
-        <div>
-            <div className="flex flex-nowrap overflow-x-hidden">
+        <div className='w-full'>
+            <div className="w-full h-96">
                 <img src={`../${selectedImage}`} alt=""
-                     className="min-w-full h-96 object-cover" />
+                     className="w-full h-full object-cover" />
             </div>
 
             <div className="py-3 flex justify-center items-center gap-2 bg-gray-100">
