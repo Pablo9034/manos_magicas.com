@@ -1,3 +1,5 @@
+import '#styles/global.css';
+
 import { useState } from 'react';
 
 const ShowImages = ({ imgs }: { imgs: string[] })=> {
