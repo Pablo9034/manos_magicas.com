@@ -1,11 +1,67 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '#layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import ShowItems from '#components/ShowItems.astro';
+
+import Whatsapp from '#assets/Whatsapp.astro';
+import Instagram from '#assets/Instagram.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Manos Magicas - Tienda de manualidades y artesanias">
+	<main class="px-3 flex flex-col gap-10 max-w-lg m-auto" 
+		  transition:name="container-main" transition:animate="slide">	
+		<header>
+			<div class="h-96 my-8 flex flex-col justify-center gap-8 relative">
+				<img src="background.jpg" alt="Imagen de Fondo" 
+					 class="absolute -z-10 w-full">
+				
+				<h1 class="text-6xl font-bold text-center text-pink-800">Manos Mágicas</h1>
+				<strong class="text-2xl text-center font-normal text-pink-950">Amelia & Noemi</strong>
+			</div>
+	
+			<div>
+				<p class="first-letter:pl-3">Descubre la magia de las <strong class="text-pink-950">manualidades</strong> en nuestra tienda online. Disfruta de nuestras <strong class="text-pink-950">piezas únicas hechas a mano</strong>. ¡Haz que cada momento sea <strong class="text-pink-950">especial</strong> con nuestras creaciones!</p>
+				<a href="/about" class="block text-pink-950 font-bold">Saber mas...</a>
+	
+				<a  href="https://chat.whatsapp.com/CRSc45tJzJMLgpBbgMjiM4"
+					class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-green-900 rounded-full text-green-800 font-semibold">
+					Unetenos en
+					<Whatsapp/>
+				</a>
+				<span>o</span>
+				<a  href="https://www.instagram.com/magic_hands_ame?igsh=d3c1MHR0dnBqeWk%3D&utm_source=qr"
+					class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-pink-800 rounded-full text-pink-800 font-semibold">
+					Siguenos en
+					<Instagram/>
+				</a>
+			</div>
+		</header>
+
+		<section>
+			<h2 class="text-5xl mb-5 font-bold text-center">
+				Tienda
+			</h2>
+
+			<div>
+				<h3 class="text-3xl text-center font-semibold">
+					Pulsas
+				</h3>
+
+				<ShowItems collection="pulsas">
+			</div>
+
+			<div>
+				<h3 class="text-3xl text-center font-semibold">
+					Flores
+				</h3>
+
+				<ShowItems collection="flores">
+			</div>
+		</section>
+    </main>
+
+    <footer class="py-5">
+        <p class="text-center">2025 creado por <strong>Pablo Alberto</strong>.</p>
+    </footer>
+
 </Layout>

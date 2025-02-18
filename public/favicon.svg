@@ -1,9 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_11_2)">
+<rect x="-4" y="-4" width="40" height="39" rx="19.5" fill="white"/>
+<path d="M4 28H28" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 9.33333V10.6667C4 11.7275 4.42143 12.7449 5.17157 13.4951C5.92172 14.2452 6.93913 14.6667 8 14.6667C9.06087 14.6667 10.0783 14.2452 10.8284 13.4951C11.5786 12.7449 12 11.7275 12 10.6667M4 9.33333H28M4 9.33333L6.66667 4H25.3333L28 9.33333M12 10.6667V9.33333M12 10.6667C12 11.7275 12.4214 12.7449 13.1716 13.4951C13.9217 14.2452 14.9391 14.6667 16 14.6667C17.0609 14.6667 18.0783 14.2452 18.8284 13.4951C19.5786 12.7449 20 11.7275 20 10.6667M20 10.6667V9.33333M20 10.6667C20 11.7275 20.4214 12.7449 21.1716 13.4951C21.9217 14.2452 22.9391 14.6667 24 14.6667C25.0609 14.6667 26.0783 14.2452 26.8284 13.4951C27.5786 12.7449 28 11.7275 28 10.6667V9.33333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.66667 28V14.4667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.3333 28V14.4667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 28V22.6667C12 21.9594 12.281 21.2811 12.781 20.781C13.2811 20.281 13.9594 20 14.6667 20H17.3333C18.0406 20 18.7189 20.281 19.219 20.781C19.719 21.2811 20 21.9594 20 22.6667V28" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_11_2">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
 </svg>
