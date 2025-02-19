@@ -1,7 +1,8 @@
 ---
 import Layout from '#layouts/Layout.astro';
 
-import Back from '#assets/Back.astro';
+import ButtonBack from '#components/ButtonBack.astro';
+
 import Whatsapp from '#assets/Whatsapp.astro';
 import Instagram from '#assets/Instagram.astro';
 import Tools from '#assets/Tools.astro';
@@ -11,14 +12,13 @@ import Clock from '#assets/Clock.astro';
 ---
 
 <Layout title="Manos Magicas - Tienda de manualidades y artesanias">	
-    <main class="px-3 flex flex-col gap-10 max-w-lg m-auto" 
+    <main class="px-3 flex flex-col gap-10 max-w-lg m-auto relative
+                 lg:grid lg:grid-cols-2 lg:max-w-6xl" 
           transition:name="container-main" transition:animate="slide">
-        <a  href="/" 
-            class="fixed top-5 left-3 border-2 border-pink-900 rounded-md bg-pink-200 shadow shadow-pink-950 opacity-90 z-50">
-            <Back class="size-10 text-pink-900"/>
-        </a>
         
-        <header>
+        <ButtonBack/>
+        
+        <header class="lg:flex lg:flex-col lg:max-h-screen lg:justify-center lg:sticky lg:top-0">
             <div class="h-96 my-8 flex flex-col justify-center gap-8 relative">
                 <img src="background.jpg" alt="Imagen de Fondo" 
                      class="absolute -z-10 w-full">
@@ -32,94 +32,93 @@ import Clock from '#assets/Clock.astro';
                 <p class="first-letter:pl-3 my-3">Solo antendemos dentro de la ciudad de <strong class="text-pink-950">Santiago de Cuba</strong>. Para más información puedes indagar en nuestras redes:</p>
     
                 <a  href="https://chat.whatsapp.com/CRSc45tJzJMLgpBbgMjiM4"
-                    class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-green-900 rounded-full text-green-800 font-semibold">
+                    class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-green-900 rounded-full text-green-800 font-semibold shadow shadow-green-900 bg-green-100">
                     Unetenos en
                     <Whatsapp/>
                 </a>
                 <span>o</span>
                 <a  href="https://www.instagram.com/magic_hands_ame?igsh=d3c1MHR0dnBqeWk%3D&utm_source=qr"
-                    class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-pink-800 rounded-full text-pink-800 font-semibold">
+                    class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-pink-800 rounded-full text-pink-800 font-semibold shadow shadow-pink-900 bg-pink-100">
                     Siguenos en
                     <Instagram/>
                 </a>
             </div>
         </header>
 
-        <article>
-            <h2 class="my-3 text-4xl font-bold text-center">Servicios Extras</h2>
-
-            <div class="flex gap-3 my-3">
-                <span class="py-1 px-3 inline-flex items-center gap-3 bg-gray-800 text-white rounded-md">
-                    <Tools/>
-                    Personalizados
-                </span>
-
-                <span class="py-1 px-3 inline-flex items-center gap-3 bg-gray-800 text-white rounded-md">
-                    <Delivery/>
-                    Domicilios
-                </span>
-            </div>
-
-            <p class="first-letter:pl-3 my-3">Aceptamos <strong class="text-pink-950">productos por encargo</strong>; para este servicio devera de proporcionar una <span class="text-pink-950 font-bold">foto o brindarnos informacion clara</span> sobre como desea que fuera el articulo.</p>
-            <p class="first-letter:pl-3 my-3">Tambien ofrecemos un <strong class="text-pink-950">servicio de domicilios</strong> dentro de la misma ciudad de <strong class="text-pink-950">Santiago de Cuba</strong>. Este servicio no viene incluido en el presio de la compra y es pagado una vez entregado el producto.</p>
-        </article>
-
-        <article>
-            <h2 class="my-3 text-4xl font-bold text-center">Orarios</h2>
-            
-            <div>
-                <span class="inline-flex items-center gap-3">
-                    <Calendar class="size-10"/>
-                    <p>Abierto de <span class="text-pink-950 font-bold">Lunes</span> a <span class="text-pink-950 font-bold">Domingo</span>.</p>
-                </span>
-
-                <span class="inline-flex items-center gap-3">
-                    <Clock class="size-10"/>
-                    <p>Abierto de <span class="text-pink-950 font-bold">8am</span> a <span class="text-pink-950 font-bold">7pm</span>.</p>
-                </span>
-            </div>
-        </article>
-
-        <article>
-            <h2 class="my-3 text-4xl font-bold text-center">Dónde encontrarnos</h2>
-
-            <div class="flex flex-col gap-3">
-                <a  href="#"
-                    class="flex gap-3">
-                    <div class="p-2 border-3 border-green-900 rounded-full bg-green-200">
-                        <Whatsapp class="size-8 text-green-900"/>
-                    </div>
+        <section class="flex flex-col gap-10 max-w-lg m-auto relative
+                        lg:pt-5">
+            <article>
+                <h2 class="my-3 text-4xl font-bold text-center">Servicios Extras</h2>
     
-                    <div>
-                        <span class="block font-bold">Amelia</span>
-                        <span>+53 56530414</span>
-                    </div>
-                </a>
+                <div class="flex gap-3 my-3">
+                    <span class="py-1 px-3 inline-flex items-center gap-3 bg-gray-800 text-white rounded-md">
+                        <Tools/>
+                        Personalizados
+                    </span>
     
-                <a  href="#"
-                    class="flex gap-3">
-                    <div class="p-2 border-3 border-green-900 rounded-full bg-green-200">
-                        <Whatsapp class="size-8 text-green-900"/>
-                    </div>
+                    <span class="py-1 px-3 inline-flex items-center gap-3 bg-gray-800 text-white rounded-md">
+                        <Delivery/>
+                        Domicilios
+                    </span>
+                </div>
     
-                    <div>
-                        <span class="block font-bold">Noemi</span>
-                        <span>+53 58133170</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="my-3">
-                <a  href="https://maps.app.goo.gl/xnwYKBnbxZLvepeR9">
-                    <img src="map.png" alt="Imagen del Mapa"
-                         class="border-3 border-gray-950 rounded-md shadow shadow-black">
-                </a>
-                <p class="my-3 font-semibold">Rpt Sueño, Calle 5ta % D y E #253 Alto</p>
-            </div>
-        </article>
+                <p class="first-letter:pl-3 my-3">Aceptamos <strong class="text-pink-950">productos por encargo</strong>; para este servicio devera de proporcionar una <span class="text-pink-950 font-bold">foto o brindarnos informacion clara</span> sobre como desea que fuera el articulo.</p>
+                <p class="first-letter:pl-3 my-3">Tambien ofrecemos un <strong class="text-pink-950">servicio de domicilios</strong> dentro de la misma ciudad de <strong class="text-pink-950">Santiago de Cuba</strong>. Este servicio no viene incluido en el presio de la compra y es pagado una vez entregado el producto.</p>
+            </article>
+    
+            <article>
+                <h2 class="my-3 text-4xl font-bold text-center">Orarios</h2>
+                
+                <div class="flex flex-col gap-3 my-3">
+                    <span class="inline-flex items-center gap-3">
+                        <Calendar class="size-10"/>
+                        <p>Abierto de <span class="text-pink-950 font-bold">Lunes</span> a <span class="text-pink-950 font-bold">Domingo</span>.</p>
+                    </span>
+    
+                    <span class="inline-flex items-center gap-3">
+                        <Clock class="size-10"/>
+                        <p>Abierto de <span class="text-pink-950 font-bold">8am</span> a <span class="text-pink-950 font-bold">7pm</span>.</p>
+                    </span>
+                </div>
+            </article>
+    
+            <article>
+                <h2 class="my-3 text-4xl font-bold text-center">Dónde encontrarnos</h2>
+    
+                <div class="flex flex-col gap-3">
+                    <a  href="#"
+                        class="flex gap-3">
+                        <div class="p-2 border-3 border-green-900 rounded-full bg-green-200">
+                            <Whatsapp class="size-8 text-green-900"/>
+                        </div>
+        
+                        <div>
+                            <span class="block font-bold">Amelia</span>
+                            <span>+53 56530414</span>
+                        </div>
+                    </a>
+        
+                    <a  href="#"
+                        class="flex gap-3">
+                        <div class="p-2 border-3 border-green-900 rounded-full bg-green-200">
+                            <Whatsapp class="size-8 text-green-900"/>
+                        </div>
+        
+                        <div>
+                            <span class="block font-bold">Noemi</span>
+                            <span>+53 58133170</span>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="my-3">
+                    <a  href="https://maps.app.goo.gl/xnwYKBnbxZLvepeR9">
+                        <img src="map.png" alt="Imagen del Mapa"
+                             class="border-3 border-gray-950 rounded-md shadow shadow-black">
+                    </a>
+                    <p class="my-3 font-semibold">Rpt Sueño, Calle 5ta % D y E #253 Alto</p>
+                </div>
+            </article>
+        </section>
     </main>
-
-    <footer class="py-5">
-        <p class="text-center">2025 creado por <strong>Pablo Alberto</strong>.</p>
-    </footer>
 </Layout>

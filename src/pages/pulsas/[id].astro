@@ -3,7 +3,7 @@ import Layout from '#layouts/Layout.astro';
 
 import ShowImages from '#components/ShowImages.tsx';
 
-import Back from '#assets/Back.astro';
+import ButtonBack from '#components/ButtonBack.astro';
 
 import { getCollection } from "astro:content";
 import { render } from 'astro:content';
@@ -20,25 +20,26 @@ export async function getStaticPaths() {
 const { id } = Astro.params;
 const { pulsa } = Astro.props;
 const { data } = pulsa;
-const { title, main_image, other_image } = data;
+const { title, price,main_image, other_image } = data;
 const { Content } = await render(pulsa);
 ---
 
 <Layout title=`Manos Magicas - ${ title }`>
-    <main class="flex flex-col gap-10 max-w-lg m-auto">
-        <a  href="/" 
-            class="fixed top-5 left-3 border-2 border-pink-900 rounded-md bg-pink-200 shadow shadow-pink-950 opacity-90 z-50">
-            <Back class="size-10 text-pink-900"/>
-        </a>
+    <main class="flex flex-col gap-4 max-w-lg m-auto">
+        
+        <ButtonBack/>
 
         <header transition:name={`item-img-${ id }`} transition:animate="slide">
-            <ShowImages imgs={[main_image, ...other_image]} client:only>
+            <ShowImages 
+                price={price}
+                imgs={[main_image, ...other_image]} 
+                client:only>
         </header>
 
         <section>
             <h1 class="text-4xl text-center">{title}</h1>
             
-            <article class="px-3 py-5 first-letter:pl-3 mx-3 bg-gray-100
+            <article class="-mt-2 px-3 py-5 first-letter:pl-3 mx-3 bg-gray-100
                             border-2 border-black rounded-md">
                 <Content/>
             </article>

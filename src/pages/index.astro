@@ -8,9 +8,10 @@ import Instagram from '#assets/Instagram.astro';
 ---
 
 <Layout title="Manos Magicas - Tienda de manualidades y artesanias">
-	<main class="px-3 flex flex-col gap-10 max-w-lg m-auto" 
+	<main class="px-3 flex flex-col gap-10 max-w-lg m-auto
+				 lg:grid lg:grid-cols-2 lg:max-w-6xl" 
 		  transition:name="container-main" transition:animate="slide">	
-		<header>
+		<header class="lg:flex lg:flex-col lg:max-h-screen lg:justify-center lg:sticky lg:top-0">
 			<div class="h-96 my-8 flex flex-col justify-center gap-8 relative">
 				<img src="background.jpg" alt="Imagen de Fondo" 
 					 class="absolute -z-10 w-full">
@@ -24,13 +25,13 @@ import Instagram from '#assets/Instagram.astro';
 				<a href="/about" class="block text-pink-950 font-bold">Saber mas...</a>
 	
 				<a  href="https://chat.whatsapp.com/CRSc45tJzJMLgpBbgMjiM4"
-					class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-green-900 rounded-full text-green-800 font-semibold">
+					class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-green-900 rounded-full text-green-800 font-semibold shadow shadow-green-900 bg-green-100">
 					Unetenos en
 					<Whatsapp/>
 				</a>
 				<span>o</span>
 				<a  href="https://www.instagram.com/magic_hands_ame?igsh=d3c1MHR0dnBqeWk%3D&utm_source=qr"
-					class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-pink-800 rounded-full text-pink-800 font-semibold">
+					class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-pink-800 rounded-full text-pink-800 font-semibold shadow shadow-pink-900 bg-pink-100">
 					Siguenos en
 					<Instagram/>
 				</a>
@@ -38,7 +39,7 @@ import Instagram from '#assets/Instagram.astro';
 		</header>
 
 		<section>
-			<h2 class="text-5xl mb-5 font-bold text-center">
+			<h2 class="text-5xl mb-5 font-bold text-center lg:pt-5">
 				Tienda
 			</h2>
 
@@ -50,7 +51,7 @@ import Instagram from '#assets/Instagram.astro';
 				<ShowItems collection="pulsas">
 			</div>
 
-			<div>
+			<div id="flores">
 				<h3 class="text-3xl text-center font-semibold">
 					Flores
 				</h3>
@@ -59,9 +60,4 @@ import Instagram from '#assets/Instagram.astro';
 			</div>
 		</section>
     </main>
-
-    <footer class="py-5">
-        <p class="text-center">2025 creado por <strong>Pablo Alberto</strong>.</p>
-    </footer>
-
 </Layout>
