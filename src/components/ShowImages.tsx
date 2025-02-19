@@ -2,7 +2,7 @@ import '#styles/global.css';
 
 import { useState } from 'react';
 
-const ShowImages = ({ imgs }: { imgs: string[] })=> {
+const ShowImages = ({ price, imgs }: { price: number, imgs: string[] })=> {
     const [selectedImage, setSelectedImage] = useState(imgs[0]);
 
     const handleImageClick = (img: string) => {
@@ -10,13 +10,19 @@ const ShowImages = ({ imgs }: { imgs: string[] })=> {
     };
     
     return (
-        <div className='w-full'>
-            <div className="w-full h-96">
+        <div className='w-full bg-gray-100 rounded-b-md'>
+            <div className="w-full h-96 relative">
                 <img src={`../${selectedImage}`} alt=""
-                     className="w-full h-full object-cover" />
+                     className="w-full h-full object-cover rounded-b-md shadow-md shadow-black"/>
+                
+                <span className='absolute bottom-0 left-0 py-1 px-3 text-3xl font-bold opacity-70
+                                 bg-gray-900 rounded-b-md rounded-tr-md text-white'>
+                    { price }
+                    <span className="font-medium text-base"> CUP</span>
+                </span>
             </div>
 
-            <div className="py-3 flex justify-center items-center gap-2 bg-gray-100">
+            <div className="py-3 flex justify-center items-center gap-2">
                 {
                     imgs.map((img: string, index: number) => {
                         return (
