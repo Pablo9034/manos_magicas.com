@@ -8,10 +8,10 @@ import Instagram from '#assets/Instagram.astro';
 ---
 
 <Layout title="Manos Magicas - Tienda de manualidades y artesanias">
-	<main class="px-3 flex flex-col gap-10 max-w-lg m-auto
-				 lg:grid lg:grid-cols-2 lg:max-w-6xl" 
+	<main class="px-3 flex flex-col gap-10 max-w-lg m-auto" 
 		  transition:name="container-main" transition:animate="slide">	
-		<header class="lg:flex lg:flex-col lg:max-h-screen lg:justify-center lg:sticky lg:top-0">
+
+		<header>
 			<div class="h-96 my-8 flex flex-col justify-center gap-8 relative">
 				<img src="background.jpg" alt="Imagen de Fondo" 
 					 class="absolute -z-10 w-full">
@@ -45,18 +45,18 @@ import Instagram from '#assets/Instagram.astro';
 
 			<div>
 				<h3 class="text-3xl text-center font-semibold">
-					Pulsas
+					Perlas
 				</h3>
 
-				<ShowItems collection="pulsas">
+				<ShowItems collection="perlas"/>
 			</div>
 
-			<div id="flores">
+			<div>
 				<h3 class="text-3xl text-center font-semibold">
-					Flores
+					Letras
 				</h3>
 
-				<ShowItems collection="flores">
+				<ShowItems collection="letras"/>
 			</div>
 		</section>
     </main>

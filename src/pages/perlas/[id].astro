@@ -1,0 +1,48 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import ShowImages from '#components/ShowImages.tsx';
+
+import ButtonBack from '#components/ButtonBack.astro';
+
+import { getCollection } from "astro:content";
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+    const items = await getCollection('perlas');
+
+    return items.map((pulsa)=> ({
+        params: { id: pulsa.id },
+        props: { pulsa }
+    }));
+}
+
+const { id } = Astro.params;
+const { pulsa } = Astro.props;
+const { data } = pulsa;
+const { title, price, main_image, other_image } = data;
+const { Content } = await render(pulsa);
+---
+
+<Layout title=`Manos Magicas - ${ title }`>
+    <main class="flex flex-col gap-4 max-w-lg m-auto">
+        
+        <ButtonBack/>
+
+        <header transition:name={`item-img-${ id }`} transition:animate="slide">
+            <ShowImages
+                price={price} 
+                imgs={[main_image, ...other_image]} 
+                client:only>
+        </header>
+
+        <section>
+            <h1 class="text-4xl text-center">{title}</h1>
+            
+            <article class="-mt-2 px-3 py-5 first-letter:pl-3 mx-3 bg-gray-100
+                            border-2 border-black rounded-md">
+                <Content/>
+            </article>
+        </section>
+    </main>
+</Layout>

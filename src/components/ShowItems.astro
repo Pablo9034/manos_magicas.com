@@ -3,7 +3,7 @@ import Items from "./Items.astro"
 
 import { getCollection } from "astro:content";
 
-type Collection = "pulsas" | "flores";
+type Collection = "perlas" | "letras" | "pulsas" | "flores";
 
 const collection = Astro.props.collection as Collection;
 const items = await getCollection(collection);
