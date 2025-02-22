@@ -1,6 +1,6 @@
 ---
 title: Perlas Blancas de 6mm
-price: 4
+price: 5
 main_image: perlas/perlas_blancas.jpeg
 other_image: [perlas/perlas_blancas_1.jpeg, perlas/perlas_blancas_2.jpeg]
 description: Añade un toque de sofisticación a tus creaciones de bisutería con nuestras perlas blancas de 6mm.

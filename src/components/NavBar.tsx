@@ -33,7 +33,7 @@ const NavBar = ({ sections }: { sections: string[] })=> {
 
     return (
         <nav className="text-lg sticky top-0 z-50 bg-white/70 py-3 backdrop-blur-md rounded-b-md
-                        flex justify-center items-center gap-3">
+                        flex justify-center items-center gap-5">
             {
                 sections.map((section)=>(
                     <a  href={`/#${section.toLowerCase()}`}

@@ -1,6 +1,6 @@
 ---
 title: Perlas Azul Cielo de 6mm
-price: 4
+price: 5
 main_image: perlas/perlas_azul_cielo.jpeg
 other_image: [perlas/perlas_azul_cielo_1.jpeg]
 description: Añade un toque de sofisticación a tus creaciones de bisutería con nuestras perlas azul cielo de 6mm.

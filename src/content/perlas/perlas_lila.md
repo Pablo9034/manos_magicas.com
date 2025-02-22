@@ -1,6 +1,6 @@
 ---
 title: Perlas Lila de 6mm
-price: 4
+price: 5
 main_image: perlas/perlas_lila.jpeg
 other_image: [perlas/perlas_lila_1.jpeg]
 description: Añade un toque de sofisticación a tus creaciones de bisutería con nuestras perlas lila de 6mm.

@@ -1,6 +1,6 @@
 ---
 title: Perlas Rojo Vino de 6mm
-price: 4
+price: 5
 main_image: perlas/perlas_rojo_vino.jpeg
 other_image: [perlas/perlas_rojo_vino_1.jpeg]
 description: Añade un toque de sofisticación a tus creaciones de bisutería con nuestras perlas azul cielo de 6mm.
