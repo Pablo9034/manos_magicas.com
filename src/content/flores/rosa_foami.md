@@ -1,9 +1,9 @@
 ---
-title: Rosa de Foami
+title: Rosa de Foami Artesanal
 price: 300
-main_image: rosa_foami.jpeg
-other_image: [rosa_foami_1.jpeg, rosa_foami_2.jpeg]
-description: Haz que cualquier ocasión sea especial con nuestras rosas artesanales.
+main_image: flores/rosa_foami.jpeg
+other_image: [flores/rosa_foami_1.jpeg, flores/rosa_foami_2.jpeg]
+description: Descubre la belleza y el encanto de nuestros ramos artesanales.
 ---
 
-Haz que cualquier ocasión sea especial con nuestras **rosas artesanales confeccionadas con foami**. Cada flor está elaborada a mano con atención meticulosa a los detalles, logrando una apariencia realista y duradera. Perfectas para regalar en cumpleaños, aniversarios, días festivos o simplemente para decorar tu hogar u oficina, estas rosas combinan la belleza de las flores naturales con la resistencia del foami, asegurando que mantengan su forma y color por mucho tiempo.
+Añade un toque de belleza artesanal a tu vida con nuestras elegantes **rosas de foami**, confeccionadas a mano. Perfecta para regalar en ocasiones especiales o para decorar tu espacio con un toque de naturaleza eterna.

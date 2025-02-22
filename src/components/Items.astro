@@ -3,7 +3,7 @@ const { title, price, main_image, description } = Astro.props.data;
 ---
 
 <a  href={ Astro.props.id }
-    class="rounded-b-md items-start my-3 pb-3 bg-gray-100 flex-nowrap">
+    class="rounded-b-md items-start my-3 pb-3 bg-gray-100 flex-nowrap show-item">
 
     <div class="relative">
         <img    src={ main_image } alt="" 
@@ -23,3 +23,25 @@ const { title, price, main_image, description } = Astro.props.data;
         <span class="text-gray-800">{ description }</span>
     </div>
 </a>
+
+<style>
+    @keyframes show-item {
+        from {
+            scale: 0;
+        }
+        to {
+            scale: 1;
+        }
+    }
+
+    .show-item {
+        view-timeline-name: --show;
+
+        animation-name: show-item;
+        animation-fill-mode: both; 
+
+        animation-timeline: --show;
+        animation-range: entry 0 cover 35%;
+    }
+    
+</style>

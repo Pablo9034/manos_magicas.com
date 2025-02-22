@@ -11,17 +11,17 @@ import { render } from 'astro:content';
 export async function getStaticPaths() {
     const items = await getCollection('perlas');
 
-    return items.map((pulsa)=> ({
-        params: { id: pulsa.id },
-        props: { pulsa }
+    return items.map((item)=> ({
+        params: { id: item.id },
+        props: { item }
     }));
 }
 
 const { id } = Astro.params;
-const { pulsa } = Astro.props;
-const { data } = pulsa;
-const { title, price, main_image, other_image } = data;
-const { Content } = await render(pulsa);
+const { item } = Astro.props;
+const { data } = item;
+const { title, price,main_image, other_image } = data;
+const { Content } = await render(item);
 ---
 
 <Layout title=`Manos Magicas - ${ title }`>
