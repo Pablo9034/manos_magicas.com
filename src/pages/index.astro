@@ -1,6 +1,7 @@
 ---
 import Layout from '#layouts/Layout.astro';
 
+import NavBar from '#components/NavBar.tsx';
 import ShowItems from '#components/ShowItems.astro';
 
 import Whatsapp from '#assets/Whatsapp.astro';
@@ -37,13 +38,16 @@ import Instagram from '#assets/Instagram.astro';
 				</a>
 			</div>
 		</header>
+		
+		<NavBar sections={['Perlas', 'Letras', 'Flores']} client:only/>
 
 		<section>
+
 			<h2 class="text-5xl mb-5 font-bold text-center lg:pt-5">
 				Tienda
 			</h2>
 
-			<div>
+			<div id="perlas">
 				<h3 class="text-3xl text-center font-semibold show">
 					Perlas
 				</h3>
@@ -51,7 +55,7 @@ import Instagram from '#assets/Instagram.astro';
 				<ShowItems collection="perlas"/>
 			</div>
 
-			<div>
+			<div id="letras">
 				<h3 class="text-3xl text-center font-semibold show">
 					Letras
 				</h3>
@@ -59,7 +63,7 @@ import Instagram from '#assets/Instagram.astro';
 				<ShowItems collection="letras"/>
 			</div>
 
-			<div>
+			<div id="flores">
 				<h3 class="text-3xl text-center font-semibold show">
 					Flores
 				</h3>
