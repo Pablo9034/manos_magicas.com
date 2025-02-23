@@ -40,4 +40,14 @@ const flores = defineCollection({
     })
 });
 
-export const collection = { perlas, letras, pulsas, flores };
+const anchetas = defineCollection({
+    schema: z.object({
+        title: z.string(),
+        price: z.number(),
+        main_image: z.string().url(),
+        other_image: z.string().url().array(),
+        description: z.string()
+    })
+});
+
+export const collection = { perlas, letras, pulsas, flores, anchetas };

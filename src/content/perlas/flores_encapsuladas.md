@@ -1,5 +1,5 @@
 ---
-title: Encantadoras Flores Encapsuladas
+title: Flores Encapsuladas
 price: 15
 main_image: perlas/flores_encapsuladas.jpeg
 other_image: [perlas/flores_encapsuladas_1.jpeg, perlas/flores_encapsuladas_2.jpeg]

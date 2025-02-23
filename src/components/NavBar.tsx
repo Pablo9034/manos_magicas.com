@@ -32,7 +32,7 @@ const NavBar = ({ sections }: { sections: string[] })=> {
     }, [sections]);
 
     return (
-        <nav className="text-lg sticky top-0 z-50 bg-white/70 py-3 backdrop-blur-md rounded-b-md
+        <nav className="text-lg sticky top-0 z-50 bg-white/70 py-3 backdrop-blur-md border-b-2 border-gray-500
                         flex justify-center items-center gap-5">
             {
                 sections.map((section)=>(

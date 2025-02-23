@@ -39,7 +39,7 @@ import Instagram from '#assets/Instagram.astro';
 			</div>
 		</header>
 		
-		<NavBar sections={['Perlas', 'Letras', 'Flores']} client:only/>
+		<NavBar sections={['Perlas', 'Letras', 'Flores', 'Anchetas']} client:only/>
 
 		<section>
 
@@ -69,6 +69,14 @@ import Instagram from '#assets/Instagram.astro';
 				</h3>
 
 				<ShowItems collection="flores"/>
+			</div>
+
+			<div id="anchetas">
+				<h3 class="text-3xl text-center font-semibold show">
+					Anchetas
+				</h3>
+
+				<ShowItems collection="anchetas"/>
 			</div>
 		</section>
     </main>
