@@ -1,43 +1,16 @@
 ---
 import Layout from '#layouts/Layout.astro';
 
+import Header from '#components/Header.astro';
 import NavBar from '#components/NavBar.tsx';
 import ShowItems from '#components/ShowItems.astro';
-
-import Whatsapp from '#assets/Whatsapp.astro';
-import Instagram from '#assets/Instagram.astro';
 ---
 
 <Layout title="Manos Magicas - Tienda de manualidades y artesanias">
 	<main class="px-3 flex flex-col gap-10 max-w-lg m-auto" 
 		  transition:name="container-main" transition:animate="slide">	
 
-		<header>
-			<div class="h-96 my-8 flex flex-col justify-center gap-8 relative">
-				<img src="background.jpg" alt="Imagen de Fondo" 
-					 class="absolute -z-10 w-full">
-				
-				<h1 class="text-6xl font-bold text-center text-pink-800">Manos Mágicas</h1>
-				<strong class="text-2xl text-center font-normal text-pink-950">Amelia & Noemi</strong>
-			</div>
-	
-			<div>
-				<p class="first-letter:pl-3">Descubre la magia de las <strong class="text-pink-950">manualidades</strong> en nuestra tienda online. Disfruta de nuestras <strong class="text-pink-950">piezas únicas hechas a mano</strong>. ¡Haz que cada momento sea <strong class="text-pink-950">especial</strong> con nuestras creaciones!</p>
-				<a href="/about" class="block text-pink-950 font-bold">Saber más...</a>
-	
-				<a  href="https://chat.whatsapp.com/CRSc45tJzJMLgpBbgMjiM4"
-					class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-green-900 rounded-full text-green-800 font-semibold shadow shadow-green-900 bg-green-100">
-					Únetenos en
-					<Whatsapp/>
-				</a>
-				<span>o</span>
-				<a  href="https://www.instagram.com/magic_hands_ame?igsh=d3c1MHR0dnBqeWk%3D&utm_source=qr"
-					class="my-3 px-3 py-1 inline-flex items-center gap-3 border-2 border-pink-800 rounded-full text-pink-800 font-semibold shadow shadow-pink-900 bg-pink-100">
-					Síguenos en
-					<Instagram/>
-				</a>
-			</div>
-		</header>
+		<Header/>
 		
 		<NavBar sections={['Perlas', 'Letras', 'Flores', 'Anchetas']} client:only/>
 

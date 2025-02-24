@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "imports": {
     "#styles/*": "./src/styles/*",
+    "#scripts/*": "./src/scripts/*",
     "#layouts/*": "./src/layouts/*",
     "#components/*": "./src/components/*",
     "#assets/*": "./src/assets/*"

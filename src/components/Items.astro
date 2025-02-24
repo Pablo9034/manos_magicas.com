@@ -35,13 +35,8 @@ const { title, price, main_image, description } = Astro.props.data;
     }
 
     .show-item {
-        view-timeline-name: --show;
-
-        animation-name: show-item;
-        animation-fill-mode: both; 
-
-        animation-timeline: --show;
-        animation-range: entry 0 cover 35%;
+        animation: show-item;
+        animation-timeline: view(100% auto);
     }
     
 </style>
