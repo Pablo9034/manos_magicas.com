@@ -1,5 +1,6 @@
 import '#styles/global.css';
 import { useState, useEffect } from 'react';
+import ShoppingBag from './ShoppingBag/ShoppingBag.tsx';
 
 const NavBar = ({ sections }: { sections: string[] })=> {
     const [activeSection, setActiveSection] = useState('');
@@ -28,9 +29,10 @@ const NavBar = ({ sections }: { sections: string[] })=> {
     }, [sections]);
 
     return (
-        <nav className="text-lg sticky top-0 z-50 bg-white/70 py-3 backdrop-blur-md border-b-2 border-gray-500
-                        grid grid-cols-[1fr_35px] items-center gap-3">
-            <div className='pl-5 flex gap-5'>
+        <nav className="sticky top-3 z-50 py-3 px-3 
+                        bg-white/70 backdrop-blur-sm border-b-2 border-gray-500
+                        grid grid-cols-[1fr_35px] items-center gap-3  rounded-full">
+            <div className='pl-5 flex gap-1 overflow-x-hidden overflow-y-hidden'>
                 {
                     sections.map((section)=>(
                         <a  href={`/#${section.toLowerCase()}`}
@@ -46,10 +48,7 @@ const NavBar = ({ sections }: { sections: string[] })=> {
                 }
             </div>
 
-            <div onClick={()=> alert('Funcionalidad no implementada')}>
-                <img src="ShoppingBag.png" alt=""
-                     className='size-8 opacity-60'/>
-            </div>
+            <ShoppingBag />
         </nav>
     );
 };

@@ -1,11 +1,12 @@
 ---
+import Add from "./ShoppingBag/Add.tsx";
+
 const { title, price, main_image, description } = Astro.props.data;
 ---
 
-<a  href={ Astro.props.id }
-    class="rounded-b-md items-start my-3 pb-3 bg-gray-100 flex-nowrap show-item">
+<div class="rounded-b-md items-start my-3 pb-3 bg-gray-100 flex-nowrap show-item relative">
 
-    <div class="relative">
+    <a href={ Astro.props.id } class="relative">
         <img    src={ main_image } alt="" 
                 transition:name={`item-img-${ Astro.props.id }`} transition:animate="slide"
                 class="rounded-md shadow shadow-gray-600 object-cover">
@@ -15,14 +16,16 @@ const { title, price, main_image, description } = Astro.props.data;
             { price } 
             <span class="font-medium text-xs">CUP</span>
         </span>
-    </div>
+    </a>
 
     <div class="py-2 px-3">
         <h3   class="block font-bold text-2xl">{ title }</h3>
 
         <span class="text-gray-800">{ description }</span>
     </div>
-</a>
+
+    <Add client:only="react"/>
+</div>
 
 <style>
     @keyframes show-item {
