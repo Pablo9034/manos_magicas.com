@@ -1,26 +1,22 @@
 ---
 import ClientRouter from 'astro/components/ClientRouter.astro';
-
 import '#styles/global.css';
-// Supports weights 400-700
 import '@fontsource-variable/dancing-script';
-// Supports weights 400-700
 import '@fontsource-variable/lora';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
-		<ClientRouter/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{ Astro.props.title }</title>
+		<title>{Astro.props.title}</title>
+		<ClientRouter />
 	</head>
 
 	<body>
-
 		<slot />
 		
 		<footer class="py-5">
@@ -30,16 +26,35 @@ import '@fontsource-variable/lora';
 </html>
 
 <style is:global>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	html {
 		font-family: 'Lora Variable', serif;
 		scroll-behavior: smooth;
 		scrollbar-width: none;
 	}
+
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100vh;
+	}
+
 	h1, h2, h3 {
   		font-family: 'Dancing Script Variable', cursive;
 	}
 </style>
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        // Precarga las imágenes de la siguiente página
+        const links = document.querySelectorAll('a[href^="/"]');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href) {
+                const prefetchLink = document.createElement('link');
+                prefetchLink.rel = 'prefetch';
+                prefetchLink.href = href;
+                document.head.appendChild(prefetchLink);
+            }
+        });
+    });
+</script>
