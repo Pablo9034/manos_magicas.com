@@ -11,8 +11,9 @@ const { title, price, main_image, description } = Astro.props.data;
                 transition:name={`item-img-${ Astro.props.id }`} transition:animate="slide"
                 class="rounded-md shadow shadow-gray-600 object-cover">
 
-        <span   class="absolute left-0 bottom-5 pl-5 pr-3 py-1 
-                    bg-gray-900 rounded-r-md font-bold text-lg text-white shadow shadow-gray-600">
+        <span   class="absolute left-0 bottom-5 pl-5 pr-7 py-1 
+                    bg-gray-900 font-bold text-lg text-white opacity-85
+                    price">
             { price } 
             <span class="font-medium text-xs">CUP</span>
         </span>
@@ -42,4 +43,10 @@ const { title, price, main_image, description } = Astro.props.data;
         animation-timeline: view(100% auto);
     }
     
+    .price {
+        clip-path: polygon(
+                            0 0, 100% 0%, 
+                            calc(100% - 14px) 50%, 
+                            100% 100%, 0 100%);
+    }
 </style>

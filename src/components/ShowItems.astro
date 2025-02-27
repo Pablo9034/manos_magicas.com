@@ -7,27 +7,12 @@ type Collection = "perlas" | "letras" | "pulsas" | "flores" | "anchetas";
 
 const collection = Astro.props.collection as Collection;
 const items = await getCollection(collection);
-
-const half = Math.ceil(items.length / 2);
-
-const left = items.slice(0, half);
-const right = items.slice(half);
 ---
 
-<div class="grid grid-cols-2 gap-3">
-    <div class="flex flex-col">
-        {
-            left.map(item => (
-                <Items id={ `${ collection }/${ item.id }` } data={item.data}/>
-            ))
-        }
-    </div>
-
-    <div class="flex flex-col">
-        {
-            right.map(item => (
-                <Items id={ `${ collection }/${ item.id }` } data={item.data}/>
-            ))
-        }
-    </div>
+<div class="columns-2 gap-3">
+    {
+        items.map(item => (
+            <Items id={ `${ collection }/${ item.id }` } data={item.data}/>
+        ))
+    }
 </div>

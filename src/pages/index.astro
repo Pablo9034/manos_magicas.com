@@ -19,36 +19,38 @@ import ShowItems from '#components/ShowItems.astro';
 				Tienda
 			</h2>
 
-			<div id="perlas">
-				<h3 class="text-3xl text-center font-semibold show">
-					Perlas
-				</h3>
-
-				<ShowItems collection="perlas"/>
-			</div>
-
-			<div id="letras">
-				<h3 class="text-3xl text-center font-semibold show">
-					Letras
-				</h3>
-
-				<ShowItems collection="letras"/>
-			</div>
-
-			<div id="flores">
-				<h3 class="text-3xl text-center font-semibold show">
-					Flores
-				</h3>
-
-				<ShowItems collection="flores"/>
-			</div>
-
-			<div id="anchetas">
-				<h3 class="text-3xl text-center font-semibold show">
-					Anchetas
-				</h3>
-
-				<ShowItems collection="anchetas"/>
+			<div class="flex flex-col gap-14">
+				<div id="perlas">
+					<h3 class="text-3xl text-center font-semibold show">
+						Perlas
+					</h3>
+	
+					<ShowItems collection="perlas"/>
+				</div>
+	
+				<div id="letras">
+					<h3 class="text-3xl text-center font-semibold show">
+						Letras
+					</h3>
+	
+					<ShowItems collection="letras"/>
+				</div>
+	
+				<div id="flores">
+					<h3 class="text-3xl text-center font-semibold show">
+						Flores
+					</h3>
+	
+					<ShowItems collection="flores"/>
+				</div>
+	
+				<div id="anchetas">
+					<h3 class="text-3xl text-center font-semibold show">
+						Anchetas
+					</h3>
+	
+					<ShowItems collection="anchetas"/>
+				</div>
 			</div>
 		</section>
     </main>
