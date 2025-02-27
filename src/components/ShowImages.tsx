@@ -15,8 +15,9 @@ const ShowImages = ({ price, imgs }: { price: number, imgs: string[] })=> {
                 <img src={`../${selectedImage}`} alt=""
                      className="w-full h-full object-cover rounded-b-md shadow-md shadow-black"/>
                 
-                <span className='absolute bottom-0 left-0 py-1 px-3 text-3xl font-bold opacity-70
-                                 bg-gray-900 rounded-b-md rounded-tr-md text-white'>
+                <span className='absolute left-0 py-1 pl-5 pr-7 text-3xl font-bold opacity-70
+                                 bg-gray-900 text-white' 
+                       style={{ clipPath: 'polygon(0 0, 100% 0%, calc(100% - 14px) 50%, 100% 100%, 0 100%)', bottom: '12px' }}>
                     { price }
                     <span className="font-medium text-base"> CUP</span>
                 </span>
