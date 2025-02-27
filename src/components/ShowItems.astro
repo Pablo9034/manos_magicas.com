@@ -9,7 +9,7 @@ const collection = Astro.props.collection as Collection;
 const items = await getCollection(collection);
 ---
 
-<div class="columns-2 gap-3">
+<div class="columns-2 gap-3 [&>*]:break-inside-avoid-column">
     {
         items.map(item => (
             <Items id={ `${ collection }/${ item.id }` } data={item.data}/>
